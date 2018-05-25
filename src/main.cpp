@@ -3,10 +3,11 @@
 #include "commom.h"
 #include "samples.h"
 
+
 int main(int argc, char** argv)
 {
     Samples sample;
-    sample.DrawCircle();
+    sample.DrawCircle(argc, argv);
     
 
     Pose pose(10., 20.);

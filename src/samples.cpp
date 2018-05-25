@@ -4,11 +4,10 @@
 #include "rviz.h"
 
 #include <math.h>
-
-void Samples::DrawCircle()
+void Samples::DrawCircle(int argc, char** argv)
 {
     Pose pose;
-    Rviz rv;
+    Rviz rv(argc, argv);
 
     double x = 0.0;
     double y = 0.0;
@@ -36,7 +35,7 @@ void Samples::DrawCircle()
         pose.position.x = x;
         pose.position.y = y;
         cout << dt << " " << pose.position.x << " " << pose.position.y << endl;
-        rv.Path();
+        rv.Path(pose, th, argc, argv);
         gettimeofday(&last_time, NULL);
         com.Sleep(1000);
     }

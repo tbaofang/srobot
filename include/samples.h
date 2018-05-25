@@ -4,7 +4,7 @@
 class Samples
 {
     public:
-        void DrawCircle();
+        void DrawCircle(int argc, char** argv);
 };
 
 #endif
